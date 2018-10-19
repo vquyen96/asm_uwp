@@ -1,0 +1,27 @@
+﻿<Page
+    x:Class="ASM_uwp2.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ASM_uwp2"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" 
+    Loaded="Page_Loaded"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <!--<Grid RenderTransformOrigin="0.112,0.513">
+        <Grid.Background>
+            <ImageBrush Stretch="UniformToFill" ImageSource="Assets/affection-american-beautiful-1150994.jpg" />
+        </Grid.Background>
+        <Button Content="RUN" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top" Height="50" Width="200" Click="Button_Click"/>
+        <Button Content="STOP" HorizontalAlignment="Left" Margin="0,60,0,0" VerticalAlignment="Top" Height="50" Width="200" Click="Button_Click_Stop"/>
+        <MediaPlayerElement x:Name="_mediaPlayerElement" AreTransportControlsEnabled="true" RenderTransformOrigin="0.503,0.644" Margin="0,134,0,0" VerticalAlignment="Stretch"/>
+        <Button Content="&gt;" HorizontalAlignment="Left" Margin="496,64,0,0" VerticalAlignment="Top" Height="40" Width="150" Click="Button_Click_1" RenderTransformOrigin="-8.6,-15.875"/>
+        <Button Content="=" HorizontalAlignment="Left" Margin="283,67,0,0" VerticalAlignment="Top" Height="40" Width="129" Click="Button_Click_2" />
+
+    </Grid>-->
+    <Grid>
+
+    </Grid>
+
+</Page>

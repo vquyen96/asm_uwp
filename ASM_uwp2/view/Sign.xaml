@@ -1,0 +1,70 @@
+﻿<Page
+    x:Class="ASM_uwp2.view.Sign"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ASM_uwp2.view"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+
+    <ScrollViewer>
+        <StackPanel Margin="30, 0, 0, 0" x:Name="ParentStackPanel" Width="293">
+            <RelativePanel>
+                <TextBox x:Name="Email" Margin="0, 30, 0, 0" Header="Email" HorizontalAlignment="Left" Text="" VerticalAlignment="Top" Width="293"/>
+                <TextBlock x:Name="email" RelativePanel.Below="Email"/>
+            </RelativePanel>
+            <RelativePanel>
+                <PasswordBox x:Name="Password" Margin="0, 30, 0, 0" Header="Password" Width="293" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <TextBlock x:Name="password" RelativePanel.Below="Password"/>
+            </RelativePanel>
+            <RelativePanel>
+                <PasswordBox x:Name="Confirm_Password" Margin="0, 30, 0, 0" Header="Confirm Password" Width="293" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <TextBlock x:Name="Confirm_Password_Message" RelativePanel.Below="Confirm_Password"/>
+            </RelativePanel>
+            <RelativePanel>
+                <TextBox x:Name="FirstName" Margin="0, 30, 0, 0" Header="First Name" HorizontalAlignment="Left" Text="" VerticalAlignment="Top" Width="293"/>
+                <TextBlock x:Name="firstName" RelativePanel.Below="FirstName"/>
+            </RelativePanel>
+            <RelativePanel>
+                <TextBox x:Name="LastName" Margin="0, 30, 0, 0" Header="Last Name" HorizontalAlignment="Left" Text="" VerticalAlignment="Top" Width="293"/>
+                <TextBlock x:Name="lastName" RelativePanel.Below="LastName"/>
+            </RelativePanel>
+            <RelativePanel>
+                <TextBox x:Name="ImageUrl" Margin="0, 30, 0, 0" Header="Avatar Url" HorizontalAlignment="Left" Text="" VerticalAlignment="Top" Width="293"/>
+                <TextBlock x:Name="avatar" RelativePanel.Below="ImageUrl"/>
+            </RelativePanel>
+
+            <Image x:Name="MyAvatar" Width="250" Height="250" HorizontalAlignment="Left"/>
+
+            <Button Content="Capture Your Photo" Margin="0, 30, 0, 0" Click="Capture_Photo" />
+            <RelativePanel>
+                <TextBox x:Name="Phone" Margin="0, 30, 0, 0" Header="Phone Number" HorizontalAlignment="Left" Text="" VerticalAlignment="Top" Width="293"/>
+                <TextBlock x:Name="phone" RelativePanel.Below="Phone"/>
+            </RelativePanel>
+            <RelativePanel>
+                <TextBox AcceptsReturn="True" x:Name="Address" Margin="0, 30, 0, 0" Header="Address" HorizontalAlignment="Left" VerticalAlignment="Top" Width="293" Height="100"/>
+                <TextBlock x:Name="address" RelativePanel.Below="Address"/>
+            </RelativePanel>
+            <RelativePanel>
+                <TextBox AcceptsReturn="True" x:Name="Introduction" Margin="0, 30, 0, 0" Header="Introduction" HorizontalAlignment="Left" VerticalAlignment="Top" Width="293" Height="100"/>
+                <TextBlock x:Name="introduction" RelativePanel.Below="Introduction"/>
+            </RelativePanel>
+            <TextBlock Text="Gender" Margin="0, 30, 0, 0"/>
+
+            <StackPanel Orientation="Horizontal">
+                <RadioButton Content="Male" Tag="1" Checked="Select_Gender"/>
+                <RadioButton Content="Female" Tag="0" Checked="Select_Gender"/>
+                <RadioButton Content="Other" Tag="2" Checked="Select_Gender" IsChecked="True"/>
+            </StackPanel>
+            <RelativePanel>
+                <CalendarDatePicker x:Name="BirthDay" Header="Birthday" Margin="0, 30, 0, 0" DateChanged="Change_Birthday"/>
+                <TextBlock x:Name="birthday" RelativePanel.Below="BirthDay"/>
+            </RelativePanel>
+            <Button x:Name="BtnSignup" Margin="0, 30, 0, 0" Content="Sign Up" HorizontalAlignment="Left" VerticalAlignment="Top" Tapped="Handle_Signup"/>
+            <Button Margin="200, -30, 0, 0" Content="Sign In" HorizontalAlignment="Left" VerticalAlignment="Top" Tapped="Sign_In"/>
+            <Button x:Name="BtnReset" Margin="0, 30, 0, 0" Content="Reset" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        </StackPanel>
+    </ScrollViewer>
+</Page>

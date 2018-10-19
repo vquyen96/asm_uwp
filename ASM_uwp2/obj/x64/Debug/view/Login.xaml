@@ -1,0 +1,34 @@
+﻿<ContentDialog x:ConnectionId='1'
+    x:Class="ASM_uwp2.view.Login"
+    x:Name="Login_Dialog"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ASM_uwp2.view"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    RequestedTheme="Dark">
+   <StackPanel HorizontalAlignment="Center">
+        <RelativePanel>
+            <TextBox x:ConnectionId='6' Header="Email:" x:Name="Email" HorizontalAlignment="Center" Width="250" />
+            <TextBlock x:ConnectionId='7' x:Name="email" Foreground="Red" RelativePanel.Below="Email"  Margin=" 0, 0, 0, 15"/>
+
+        </RelativePanel>
+        <RelativePanel>
+            <PasswordBox x:ConnectionId='4' Header="Password:" x:Name="Password" HorizontalAlignment="Center" Width="250"/>
+            <TextBlock x:ConnectionId='5' x:Name="password" Foreground="Red" RelativePanel.Below="Password" Margin=" 0, 0, 0, 15"/>
+            <!--<TextBlock x:Name="Password_Message" RelativePanel.Below="Password"/>-->
+        </RelativePanel>
+
+        <StackPanel Orientation="Horizontal">
+            <Button x:ConnectionId='2' Content="Login" HorizontalAlignment="Left" VerticalAlignment="Top"                                           />
+            <Button x:ConnectionId='3' Content="Sign Up" HorizontalAlignment="Left" Margin="20,0,0,0" VerticalAlignment="Top"                 />
+        </StackPanel>
+    </StackPanel>
+        
+
+
+
+</ContentDialog>
+

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Source>C:\Users\QuyenDo\Downloads\Reload-1.2s-200px.gif</Source>
+    <SmallTileSource>C:\Users\QuyenDo\Downloads\Reload-1.2s-200px.gif</SmallTileSource>
+    <MediumTileSource>C:\Users\QuyenDo\Downloads\Reload-1.2s-200px.gif</MediumTileSource>
+    <WideTileSource>C:\Users\QuyenDo\Downloads\Reload-1.2s-200px.gif</WideTileSource>
+    <LargeTileSource>C:\Users\QuyenDo\Downloads\Reload-1.2s-200px.gif</LargeTileSource>
+    <AppIconSource>C:\Users\QuyenDo\Downloads\Reload-1.2s-200px.gif</AppIconSource>
+    <SplashScreenSource>C:\Users\QuyenDo\Downloads\Reload-1.2s-200px.gif</SplashScreenSource>
+    <PackageLogoSource>C:\Users\QuyenDo\Downloads\Reload-1.2s-200px.gif</PackageLogoSource>
+  </PropertyGroup>
+</Project>
