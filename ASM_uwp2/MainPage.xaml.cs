@@ -42,25 +42,28 @@ namespace ASM_uwp2
 
         private async void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            Windows.Storage.StorageFolder localFolder = Windows.Storage.ApplicationData.Current.LocalFolder;
 
-            StorageFile sampleFile = await localFolder.GetFileAsync("token.txt");
-            Debug.WriteLine(sampleFile);
-            string timestamp = await FileIO.ReadTextAsync(sampleFile);
-            TokenResponse token = JsonConvert.DeserializeObject<TokenResponse>(timestamp);
-            Debug.WriteLine(token.token);
+            //await ApiHandle.Get_Mine_Song();
+            //var token = JsonConvert.DeserializeObject<>(contents);
+            //Windows.Storage.StorageFolder localFolder = Windows.Storage.ApplicationData.Current.LocalFolder;
 
-            HttpClient client2 = new HttpClient();
-            //client2.DefaultRequestHeaders.Add("Authorization", "Basic " + token);
-            client2.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Basic", token.token);
-            var resp = client2.GetAsync("http://2-dot-backup-server-002.appspot.com/_api/v2/members/information").Result;
-            Debug.WriteLine(resp);
-            Debug.WriteLine(resp.StatusCode);
-            Debug.WriteLine(System.Net.HttpStatusCode.Created);
-            if (resp.StatusCode == System.Net.HttpStatusCode.Created)
+            //StorageFile sampleFile = await localFolder.GetFileAsync("token.txt");
+            //Debug.WriteLine(sampleFile);
+            //string timestamp = await FileIO.ReadTextAsync(sampleFile);
+            //TokenResponse token = JsonConvert.DeserializeObject<TokenResponse>(timestamp);
+            //Debug.WriteLine(token.token);
+
+            //HttpClient client2 = new HttpClient();
+
+            //client2.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Basic", token.token);
+            //var resp = client2.GetAsync("http://2-dot-backup-server-002.appspot.com/_api/v2/members/information").Result;
+            //Debug.WriteLine(resp);
+            //Debug.WriteLine(resp.StatusCode);
+            //Debug.WriteLine(System.Net.HttpStatusCode.Created);
+            if (await ApiHandle.Check_info())
             {
                 var rootFrame = Window.Current.Content as Frame;
-                rootFrame.Navigate(typeof(view.SplitView));
+                rootFrame.Navigate(typeof(view.ListView));
             }
             else
             {
@@ -68,7 +71,7 @@ namespace ASM_uwp2
                 await login.ShowAsync();
             }
 
-            
+
         }
 
         private void TextBlock_SelectionChanged(object sender, RoutedEventArgs e)

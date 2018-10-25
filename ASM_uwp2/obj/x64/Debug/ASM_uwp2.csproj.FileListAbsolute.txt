@@ -262,3 +262,8 @@ C:\Users\QuyenDo\source\repos\ASM_uwp2\ASM_uwp2\obj\x64\Debug\view\ListView.g.i.
 C:\Users\QuyenDo\source\repos\ASM_uwp2\ASM_uwp2\obj\x64\Debug\view\ListView.g.cs
 C:\Users\QuyenDo\source\repos\ASM_uwp2\ASM_uwp2\obj\x64\Debug\view\ListView.xaml
 C:\Users\QuyenDo\source\repos\ASM_uwp2\ASM_uwp2\obj\x64\Debug\view\ListView.xbf
+C:\Users\QuyenDo\source\repos\ASM_uwp2\ASM_uwp2\obj\x64\Debug\view\TestView.g.i.cs
+C:\Users\QuyenDo\source\repos\ASM_uwp2\ASM_uwp2\obj\x64\Debug\view\TestView.g.cs
+C:\Users\QuyenDo\source\repos\ASM_uwp2\ASM_uwp2\obj\x64\Debug\view\TestView.xaml
+C:\Users\QuyenDo\source\repos\ASM_uwp2\ASM_uwp2\obj\x64\Debug\view\TestView.xbf
+C:\Users\QuyenDo\source\repos\ASM_uwp2\ASM_uwp2\bin\x64\Debug\view\TestView.xbf

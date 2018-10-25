@@ -6,6 +6,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
+    RequestedTheme="Dark"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
 
@@ -62,9 +63,10 @@
                 <CalendarDatePicker x:Name="BirthDay" Header="Birthday" Margin="0, 30, 0, 0" DateChanged="Change_Birthday"/>
                 <TextBlock x:Name="birthday" RelativePanel.Below="BirthDay"/>
             </RelativePanel>
-            <Button x:Name="BtnSignup" Margin="0, 30, 0, 0" Content="Sign Up" HorizontalAlignment="Left" VerticalAlignment="Top" Tapped="Handle_Signup"/>
-            <Button Margin="200, -30, 0, 0" Content="Sign In" HorizontalAlignment="Left" VerticalAlignment="Top" Tapped="Sign_In"/>
-            <Button x:Name="BtnReset" Margin="0, 30, 0, 0" Content="Reset" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <Button x:Name="BtnSignup" Margin="0, 30, 0, 0" Content="Sign Up" HorizontalAlignment="Stretch" VerticalAlignment="Top" Tapped="Handle_Signup"/>
+            <Button x:Name="BtnReset" Margin="0, 30, 0, 0" Content="Reset" HorizontalAlignment="Stretch" VerticalAlignment="Top"/>
+            <Button Margin="0, 30, 0, 0" Content="Sign In" HorizontalAlignment="Stretch" VerticalAlignment="Top" Tapped="Sign_In"/>
+            
         </StackPanel>
     </ScrollViewer>
 </Page>

@@ -20,6 +20,7 @@ using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
@@ -31,179 +32,85 @@ namespace ASM_uwp2.view
     /// </summary>
     public sealed partial class ListView : Page
     {
-        private static string SONG_API_URL = "https://2-dot-backup-server-002.appspot.com/_api/v2/songs";
+        private Song currentSong;
+        //private static string SONG_API_URL = "https://2-dot-backup-server-002.appspot.com/_api/v2/songs";
         private bool isPlaying = false;
 
         int onPlay = 0;
+        Boolean myList = false;
 
         TimeSpan _position;
 
         DispatcherTimer _timer = new DispatcherTimer();
 
         private ObservableCollection<Song> listSong;
+        private ObservableCollection<Song> listMySong;
 
         internal ObservableCollection<Song> ListSong { get => listSong; set => listSong = value; }
+        internal ObservableCollection<Song> ListMySong { get => listMySong; set => listMySong = value; }
+        Member member;
 
         public ListView()
         {
-            var content = ApiHandle.Get_Song();
-            List<Song> list_song_1 = JsonConvert.DeserializeObject<List<Song>>(content);
-
-
-
+            this.currentSong = new Song();
             this.ListSong = new ObservableCollection<Song>();
-            this.ListSong.Add(new Song()
-            {
-                name = "Chưa bao giờ",
-                singer = "Hà Anh Tuấn",
-                thumbnail = "https://file.tinnhac.com/resize/600x-/music/2017/07/04/19554480101556946929-b89c.jpg",
-                link = "https://c1-ex-swe.nixcdn.com/NhacCuaTui963/ChuaBaoGioSEESINGSHARE2-HaAnhTuan-5111026.mp3"
-            });
-            this.ListSong.Add(new Song()
-            {
-                name = "Tình thôi xót xa",
-                singer = "Hà Anh Tuấn",
-                thumbnail = "https://i.ytimg.com/vi/XyjhXzsVdiI/maxresdefault.jpg",
-                link = "https://c1-ex-swe.nixcdn.com/NhacCuaTui963/TinhThoiXotXaSEESINGSHARE1-HaAnhTuan-4652191.mp3"
-            });
-            this.ListSong.Add(new Song()
-            {
-                name = "Tháng tư là tháng nói dối của em",
-                singer = "Hà Anh Tuấn",
-                thumbnail = "https://sky.vn/wp-content/uploads/2018/05/0-30.jpg",
-                link = "https://od.lk/s/NjFfMjM4MzQ1OThf/ThangTuLaLoiNoiDoiCuaEm-HaAnhTuan-4609544.mp3"
-            });
-            this.ListSong.Add(new Song()
-            {
-                name = "Nơi ấy bình yên",
-                singer = "Hà Anh Tuấn",
-                thumbnail = "https://i.ytimg.com/vi/A8u_fOetSQc/hqdefault.jpg",
-                link = "https://c1-ex-swe.nixcdn.com/NhacCuaTui946/NoiAyBinhYenSeeSingShare2-HaAnhTuan-5085337.mp3"
-            });
-            this.ListSong.Add(new Song()
-            {
-                name = "Giấc mơ chỉ là giấc mơ",
-                singer = "Hà Anh Tuấn",
-                thumbnail = "https://i.ytimg.com/vi/J_VuNwxSEi0/maxresdefault.jpg",
-                link = "https://c1-ex-swe.nixcdn.com/NhacCuaTui945/GiacMoChiLaGiacMoSeeSingShare2-HaAnhTuan-5082049.mp3"
-            });
-            this.ListSong.Add(new Song()
-            {
-                name = "Người tình mùa đông",
-                singer = "Hà Anh Tuấn",
-                thumbnail = "https://i.ytimg.com/vi/EXAmxBxpZEM/maxresdefault.jpg",
-                link = "https://c1-ex-swe.nixcdn.com/NhacCuaTui963/NguoiTinhMuaDongSEESINGSHARE2-HaAnhTuan-5104816.mp3"
-            });
+            LoadAllSong(ListSong);
+            this.ListMySong = new ObservableCollection<Song>();
+            
+            LoadMySong(ListMySong);
+            Debug.WriteLine(ListMySong);
+            GetMember();
+
             this.InitializeComponent();
             this.VolumeSlider.Value = 100;
             _timer.Interval = TimeSpan.FromMilliseconds(1000);
             _timer.Tick += ticktock;
             _timer.Start();
         }
-        //private async void Page_Loaded(object sender, RoutedEventArgs e)
-        //{
 
-        //    Windows.Storage.StorageFolder localFolder = Windows.Storage.ApplicationData.Current.LocalFolder;
+        
 
-        //    StorageFile sampleFile = await localFolder.GetFileAsync("token.txt");
-        //    Debug.WriteLine(sampleFile);
-        //    string timestamp = await FileIO.ReadTextAsync(sampleFile);
-        //    TokenResponse token = JsonConvert.DeserializeObject<TokenResponse>(timestamp);
-        //    Debug.WriteLine(token.token);
-
-        //    HttpClient httpClient = new HttpClient();
-        //    httpClient.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Basic", token.token);
-        //    //var content = new StringContent(JsonConvert.SerializeObject(song), System.Text.Encoding.UTF8, "application/json");
-        //    var response = httpClient.GetAsync(SONG_API_URL);
-
-        //    string contents = await response.Result.Content.ReadAsStringAsync();
-        //    Debug.WriteLine(contents);
-
-
-        //    this.ListSong = new ObservableCollection<Song>();
-
-        //    //List<Song> list_song_1 = JsonConvert.DeserializeObject<List<Song>>(contents);
-        //    //foreach(Song song_item in list_song_1)
-        //    //{
-        //    //    this.ListSong.Add(song_item);
-        //    //}
-
-        //    this.ListSong.Add(new Song()
-        //    {
-        //        name = "Chưa bao giờ",
-        //        singer = "Hà Anh Tuấn",
-        //        thumbnail = "https://file.tinnhac.com/resize/600x-/music/2017/07/04/19554480101556946929-b89c.jpg",
-        //        link = "https://c1-ex-swe.nixcdn.com/NhacCuaTui963/ChuaBaoGioSEESINGSHARE2-HaAnhTuan-5111026.mp3"
-        //    });
-        //    this.ListSong.Add(new Song()
-        //    {
-        //        name = "Tình thôi xót xa",
-        //        singer = "Hà Anh Tuấn",
-        //        thumbnail = "https://i.ytimg.com/vi/XyjhXzsVdiI/maxresdefault.jpg",
-        //        link = "https://c1-ex-swe.nixcdn.com/NhacCuaTui963/TinhThoiXotXaSEESINGSHARE1-HaAnhTuan-4652191.mp3"
-        //    });
-        //    this.ListSong.Add(new Song()
-        //    {
-        //        name = "Tháng tư là tháng nói dối của em",
-        //        singer = "Hà Anh Tuấn",
-        //        thumbnail = "https://sky.vn/wp-content/uploads/2018/05/0-30.jpg",
-        //        link = "https://od.lk/s/NjFfMjM4MzQ1OThf/ThangTuLaLoiNoiDoiCuaEm-HaAnhTuan-4609544.mp3"
-        //    });
-        //    this.ListSong.Add(new Song()
-        //    {
-        //        name = "Nơi ấy bình yên",
-        //        singer = "Hà Anh Tuấn",
-        //        thumbnail = "https://i.ytimg.com/vi/A8u_fOetSQc/hqdefault.jpg",
-        //        link = "https://c1-ex-swe.nixcdn.com/NhacCuaTui946/NoiAyBinhYenSeeSingShare2-HaAnhTuan-5085337.mp3"
-        //    });
-        //    this.ListSong.Add(new Song()
-        //    {
-        //        name = "Giấc mơ chỉ là giấc mơ",
-        //        singer = "Hà Anh Tuấn",
-        //        thumbnail = "https://i.ytimg.com/vi/J_VuNwxSEi0/maxresdefault.jpg",
-        //        link = "https://c1-ex-swe.nixcdn.com/NhacCuaTui945/GiacMoChiLaGiacMoSeeSingShare2-HaAnhTuan-5082049.mp3"
-        //    });
-        //    this.ListSong.Add(new Song()
-        //    {
-        //        name = "Người tình mùa đông",
-        //        singer = "Hà Anh Tuấn",
-        //        thumbnail = "https://i.ytimg.com/vi/EXAmxBxpZEM/maxresdefault.jpg",
-        //        link = "https://c1-ex-swe.nixcdn.com/NhacCuaTui963/NguoiTinhMuaDongSEESINGSHARE2-HaAnhTuan-5104816.mp3"
-        //    });
-
-        //    this.VolumeSlider.Value = 100;
-        //    _timer.Interval = TimeSpan.FromMilliseconds(1000);
-        //    _timer.Tick += ticktock;
-        //    _timer.Start();
-
-        //}
-
-
-
-        //private string List_Song()
-        //{
-
-        //    Windows.Storage.StorageFolder localFolder = Windows.Storage.ApplicationData.Current.LocalFolder;
-
-        //    StorageFile sampleFile = localFolder.GetFileAsync("token.txt");
-        //    Debug.WriteLine(sampleFile);
-        //    string timestamp = await FileIO.ReadTextAsync(sampleFile);
-        //    TokenResponse token = JsonConvert.DeserializeObject<TokenResponse>(timestamp);
-        //    Debug.WriteLine(token.token);
-
-        //    HttpClient httpClient = new HttpClient();
-        //    httpClient.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Basic", );
-        //    //var content = new StringContent(JsonConvert.SerializeObject(song), System.Text.Encoding.UTF8, "application/json");
-        //    var response = httpClient.GetAsync(SONG_API_URL);
-
-        //    string contents = response.Result.Content.ReadAsStringAsync();
-        //    Debug.WriteLine(contents);
-        //    return contents;
-        //}
-
-        private void Get_Mine_Song()
+        private async void LoadAllSong(ObservableCollection<Song> songs)
         {
-            throw new NotImplementedException();
+            string content = await ApiHandle.Get_Song();
+            ObservableCollection<Song> list_song = JsonConvert.DeserializeObject<ObservableCollection<Song>>(content);
+
+            foreach (var data in list_song)
+            {
+                string str = data.thumbnail;
+                string lastWord = str.Split('.').Last();
+                if (lastWord.Contains("?"))
+                {
+                    Debug.WriteLine(lastWord);
+                    lastWord = lastWord.Split('?')[0];
+                    Debug.WriteLine(lastWord);
+                }
+                
+
+                bool check = lastWord == "jpg" || lastWord == "png";
+                if (!check)
+                {
+                    data.thumbnail = "https://api.adorable.io/avatars/175/" + data.name + ".png";
+                }
+                Debug.WriteLine(data.thumbnail);
+                songs.Insert(0, data);
+            }
+        }
+        private async void LoadMySong(ObservableCollection<Song> mysongs)
+        {
+            string content = await ApiHandle.Get_Mine_Song();
+            ObservableCollection<Song> list_my_song = JsonConvert.DeserializeObject<ObservableCollection<Song>>(content);
+            foreach (var data in list_my_song)
+            {
+                mysongs.Insert(0, data);
+            }
+        }
+
+        private async void GetMember()
+        {
+            this.member = await ApiHandle.Get_info();
+            avatar.ImageSource = new BitmapImage(new Uri(member.avatar));
+            username.Text = member.email;
         }
 
         private void ticktock(object sender, object e)
@@ -213,6 +120,42 @@ namespace ASM_uwp2.view
             Progress.Maximum = MediaPlayer.NaturalDuration.TimeSpan.TotalSeconds;
             MaxDuration.Text = MediaPlayer.NaturalDuration.TimeSpan.Minutes + ":" + MediaPlayer.NaturalDuration.TimeSpan.Seconds;
             Progress.Value = MediaPlayer.Position.TotalSeconds;
+            //Debug.WriteLine(MinDuration.Text + "--" + MaxDuration.Text);
+            if (MinDuration.Text == MaxDuration.Text && MaxDuration.Text != "0:0")
+            {
+                Debug.WriteLine("Hết");
+                MediaPlayer.Stop();
+                if (myList)
+                {
+                    if (onPlay < ListMySong.Count - 1)
+                    {
+                        onPlay = onPlay + 1;
+                    }
+                    else
+                    {
+                        onPlay = 0;
+                    }
+                    LoadSong(ListMySong[onPlay]);
+                    PlaySong();
+                    MyList.SelectedIndex = onPlay;
+                }
+                else
+                {
+                    if (onPlay < ListSong.Count - 1)
+                    {
+                        onPlay = onPlay + 1;
+                    }
+                    else
+                    {
+                        onPlay = 0;
+                    }
+                    LoadSong(ListSong[onPlay]);
+                    PlaySong();
+                    MenuList.SelectedIndex = onPlay;
+                }
+                
+            }
+
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -229,6 +172,17 @@ namespace ASM_uwp2.view
             LoadSong(selectedSong);
             PlaySong();
         }
+        private void StackPanel_Tapped_MySong(object sender, TappedRoutedEventArgs e)
+        {
+            StackPanel panel = sender as StackPanel;
+            Song selectedSong = panel.Tag as Song;
+            Debug.WriteLine(ListSong[0].name);
+            onPlay = MyList.SelectedIndex;
+            LoadSong(selectedSong);
+            PlaySong();
+            myList = true; 
+        }
+
         private void PlaySong()
         {
             MediaPlayer.Play();
@@ -309,6 +263,119 @@ namespace ASM_uwp2.view
                 MediaPlayer.Volume = vol.Value / 100;
                 this.volume.Text = vol.Value.ToString();
             }
+        }
+
+        private void MenuList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private async void BtnSignup_Click(object sender, RoutedEventArgs e)
+        {
+            bool validate = true;
+            this.currentSong.name = this.Name.Text;
+            this.currentSong.description = this.Description.Text;
+            this.currentSong.singer = this.Singer.Text;
+            this.currentSong.author = this.Author.Text;
+            this.currentSong.thumbnail = this.Thumbnail.Text;
+            this.currentSong.link = this.Link.Text;
+
+            if (this.currentSong.name == "")
+            {
+                validate = false;
+                name.Text = "Ten khong duoc de trong!";
+                name.Foreground = new SolidColorBrush(Windows.UI.Colors.Red);
+                Name.Focus(FocusState.Programmatic);
+            }
+            else
+            {
+                name.Text = "";
+            }
+
+            if (this.currentSong.description == "")
+            {
+                validate = false;
+                description.Text = "Chi tiet khong duoc de trong!";
+                description.Foreground = new SolidColorBrush(Windows.UI.Colors.Red);
+                Description.Focus(FocusState.Programmatic);
+            }
+            else
+            {
+                description.Text = "";
+            }
+
+            if (this.currentSong.singer == "")
+            {
+                validate = false;
+                singer.Text = "Ca si khong duoc de trong!";
+                singer.Foreground = new SolidColorBrush(Windows.UI.Colors.Red);
+                Singer.Focus(FocusState.Programmatic);
+            }
+            else
+            {
+                singer.Text = "";
+            }
+
+            if (this.currentSong.author == "")
+            {
+                validate = false;
+                author.Text = "Tac gia khong duoc de trong!";
+                author.Foreground = new SolidColorBrush(Windows.UI.Colors.Red);
+                Author.Focus(FocusState.Programmatic);
+            }
+            else
+            {
+                author.Text = "";
+            }
+
+            if (this.currentSong.thumbnail == "")
+            {
+                validate = false;
+                thumbnail.Text = "Anh dai dien khong duoc de trong!";
+                thumbnail.Foreground = new SolidColorBrush(Windows.UI.Colors.Red);
+                Thumbnail.Focus(FocusState.Programmatic);
+            }
+            else
+            {
+                thumbnail.Text = "";
+            }
+
+            if (this.currentSong.link == "")
+            {
+                validate = false;
+                link.Text = "Link khong duoc de trong!";
+                link.Foreground = new SolidColorBrush(Windows.UI.Colors.Red);
+                Link.Focus(FocusState.Programmatic);
+            }
+            else
+            {
+                link.Text = "";
+            }
+
+            if (validate)
+            {
+                await ApiHandle.Create_Song(this.currentSong);
+                Debug.WriteLine("Action success.");
+                var _Frame = Window.Current.Content as Frame;
+                _Frame.Navigate(_Frame.Content.GetType());
+                _Frame.GoBack();
+            }
+            
+        }
+
+        private async void AppBarButton_Click(object sender, RoutedEventArgs e)
+        {
+            StorageFolder folder = ApplicationData.Current.LocalFolder;
+            StorageFile file = await folder.CreateFileAsync("token.txt", CreationCollisionOption.ReplaceExisting);
+            await FileIO.WriteTextAsync(file, "");
+            Login login = new Login();
+            await login.ShowAsync();
+        }
+
+        public async Task<bool> isFilePresent(string fileName)
+        {
+            var item = await ApplicationData.Current.LocalFolder.TryGetItemAsync(fileName);
+            return item != null;
         }
     }
 }

@@ -9,7 +9,7 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <SplitView x:ConnectionId='2' x:Name="MySplitView" IsPaneOpen="False" DisplayMode="CompactOverlay" CompactPaneLength="50" OpenPaneLength="250">
+        <SplitView x:ConnectionId='2' x:Name="MySplitView" IsPaneOpen="False" DisplayMode="CompactInline" CompactPaneLength="50" OpenPaneLength="250">
             <SplitView.Pane>
                 <StackPanel x:ConnectionId='4' x:Name="StackIcon" Margin="10, 50, 0, 0">
                     <RadioButton x:ConnectionId='5' Tag="Home" Style="{ThemeResource TextBlockButtonStyle}" Margin="0, 0, 0, 10"                          >

@@ -29,5 +29,8 @@ namespace ASM_uwp2.Entity
         public string birthday { get => _birthday; set => _birthday = value; }
         public string email { get => _email; set => _email = value; }
         public string password { get => _password; set => _password = value; }
+
+
+        
     }
 }

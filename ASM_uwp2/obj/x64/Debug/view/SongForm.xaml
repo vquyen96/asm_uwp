@@ -18,7 +18,7 @@
             <TextBox x:ConnectionId='8' x:Name="Thumbnail" Margin="0, 30, 0, 0" Header="Thumbnail" HorizontalAlignment="Left" Text="" VerticalAlignment="Top" Width="293"/>
             <Button x:ConnectionId='9' x:Name="BtnSignup" Margin="0, 30, 0, 0" Content="Sign Up" HorizontalAlignment="Left" VerticalAlignment="Top"                          />
             <Button x:ConnectionId='10' x:Name="BtnReset" Margin="0, 30, 0, 0" Content="Reset" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-            <MediaPlayerElement x:ConnectionId='11' Source="https://od.lk/s/NjFfMjM4MzQ1OThf/ThangTuLaLoiNoiDoiCuaEm-HaAnhTuan-4609544.mp3" x:Name="Player"/>
+            <!--<MediaPlayerElement Source="https://od.lk/s/NjFfMjM4MzQ1OThf/ThangTuLaLoiNoiDoiCuaEm-HaAnhTuan-4609544.mp3" x:Name="Player"/>-->
         </StackPanel>
     </ScrollViewer>
 </Page>

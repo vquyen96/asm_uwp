@@ -120,6 +120,9 @@
     <Compile Include="view\Sign.xaml.cs">
       <DependentUpon>Sign.xaml</DependentUpon>
     </Compile>
+    <Compile Include="view\TestView.xaml.cs">
+      <DependentUpon>TestView.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -129,6 +132,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\affection-american-beautiful-1150994.jpg" />
+    <Content Include="Assets\drew-colins-1115973-unsplash.jpg" />
     <Content Include="Assets\LargeTile.scale-100.png" />
     <Content Include="Assets\LargeTile.scale-125.png" />
     <Content Include="Assets\LargeTile.scale-150.png" />
@@ -204,6 +208,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="view\Sign.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="view\TestView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

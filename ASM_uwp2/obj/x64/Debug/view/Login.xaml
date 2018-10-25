@@ -22,7 +22,8 @@
         </RelativePanel>
 
         <StackPanel Orientation="Horizontal">
-            <Button x:ConnectionId='2' Content="Login" HorizontalAlignment="Left" VerticalAlignment="Top"                                           />
+            <Button x:ConnectionId='2' Content="Login" HorizontalAlignment="Left" VerticalAlignment="Top"                     />
+            
             <Button x:ConnectionId='3' Content="Sign Up" HorizontalAlignment="Left" Margin="20,0,0,0" VerticalAlignment="Top"                 />
         </StackPanel>
     </StackPanel>

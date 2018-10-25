@@ -30,7 +30,7 @@ namespace ASM_uwp2.view
         {
             this.currentSong = new Song();
             this.InitializeComponent();
-            this.Player.MediaPlayer.Play();
+            //this.Player.MediaPlayer.Play();
         }
 
         private async void BtnSignup_Click_1(object sender, RoutedEventArgs e)

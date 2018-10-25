@@ -31,13 +31,13 @@
     <AppXManifest Include="C:\Users\QuyenDo\source\repos\ASM_uwp2\ASM_uwp2\bin\x64\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-10-19T03:48:51.357</Modified>
+      <Modified>2018-10-25T10:58:15.407</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\QuyenDo\source\repos\ASM_uwp2\ASM_uwp2\bin\x64\Debug\ASM_uwp2.exe">
       <PackagePath>entrypoint\ASM_uwp2.exe</PackagePath>
-      <Modified>2018-10-19T03:48:50.172</Modified>
+      <Modified>2018-10-25T10:58:14.199</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\QuyenDo\.nuget\packages\microsoft.csharp\4.3.0\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -551,30 +551,34 @@
       <PackagePath>Assets\affection-american-beautiful-1150994.jpg</PackagePath>
       <Modified>2018-10-13T13:03:12.718</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\QuyenDo\source\repos\ASM_uwp2\ASM_uwp2\Assets\drew-colins-1115973-unsplash.jpg">
+      <PackagePath>Assets\drew-colins-1115973-unsplash.jpg</PackagePath>
+      <Modified>2018-10-25T05:47:14.874</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\QuyenDo\source\repos\ASM_uwp2\ASM_uwp2\Assets\LargeTile.scale-100.png">
       <PackagePath>Assets\LargeTile.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-10-17T08:59:01.226</Modified>
+      <Modified>2018-10-25T04:38:43.490</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\QuyenDo\source\repos\ASM_uwp2\ASM_uwp2\Assets\LargeTile.scale-125.png">
       <PackagePath>Assets\LargeTile.scale-125.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-10-17T08:59:01.285</Modified>
+      <Modified>2018-10-25T04:38:43.543</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\QuyenDo\source\repos\ASM_uwp2\ASM_uwp2\Assets\LargeTile.scale-150.png">
       <PackagePath>Assets\LargeTile.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-10-17T08:59:01.347</Modified>
+      <Modified>2018-10-25T04:38:43.610</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\QuyenDo\source\repos\ASM_uwp2\ASM_uwp2\Assets\LargeTile.scale-200.png">
       <PackagePath>Assets\LargeTile.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-10-17T08:59:01.448</Modified>
+      <Modified>2018-10-25T04:38:43.718</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\QuyenDo\source\repos\ASM_uwp2\ASM_uwp2\Assets\LargeTile.scale-400.png">
       <PackagePath>Assets\LargeTile.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-10-17T08:59:01.802</Modified>
+      <Modified>2018-10-25T04:38:44.137</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\QuyenDo\source\repos\ASM_uwp2\ASM_uwp2\Assets\logo_uwp.png">
       <PackagePath>Assets\logo_uwp.png</PackagePath>
@@ -583,177 +587,177 @@
     <AppxPackagedFile Include="C:\Users\QuyenDo\source\repos\ASM_uwp2\ASM_uwp2\Assets\SmallTile.scale-100.png">
       <PackagePath>Assets\SmallTile.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-10-17T08:59:00.515</Modified>
+      <Modified>2018-10-25T04:38:42.714</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\QuyenDo\source\repos\ASM_uwp2\ASM_uwp2\Assets\SmallTile.scale-125.png">
       <PackagePath>Assets\SmallTile.scale-125.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-10-17T08:59:00.532</Modified>
+      <Modified>2018-10-25T04:38:42.736</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\QuyenDo\source\repos\ASM_uwp2\ASM_uwp2\Assets\SmallTile.scale-150.png">
       <PackagePath>Assets\SmallTile.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-10-17T08:59:00.555</Modified>
+      <Modified>2018-10-25T04:38:42.762</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\QuyenDo\source\repos\ASM_uwp2\ASM_uwp2\Assets\SmallTile.scale-200.png">
       <PackagePath>Assets\SmallTile.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-10-17T08:59:00.577</Modified>
+      <Modified>2018-10-25T04:38:42.786</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\QuyenDo\source\repos\ASM_uwp2\ASM_uwp2\Assets\SmallTile.scale-400.png">
       <PackagePath>Assets\SmallTile.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-10-17T08:59:00.615</Modified>
+      <Modified>2018-10-25T04:38:42.846</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\QuyenDo\source\repos\ASM_uwp2\ASM_uwp2\Assets\SplashScreen.scale-100.png">
       <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-10-17T08:59:02.172</Modified>
+      <Modified>2018-10-25T04:38:44.527</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\QuyenDo\source\repos\ASM_uwp2\ASM_uwp2\Assets\SplashScreen.scale-125.png">
       <PackagePath>Assets\SplashScreen.scale-125.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-10-17T08:59:02.259</Modified>
+      <Modified>2018-10-25T04:38:44.604</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\QuyenDo\source\repos\ASM_uwp2\ASM_uwp2\Assets\SplashScreen.scale-150.png">
       <PackagePath>Assets\SplashScreen.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-10-17T08:59:02.369</Modified>
+      <Modified>2018-10-25T04:38:44.710</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\QuyenDo\source\repos\ASM_uwp2\ASM_uwp2\Assets\SplashScreen.scale-400.png">
       <PackagePath>Assets\SplashScreen.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-10-17T08:59:03.318</Modified>
+      <Modified>2018-10-25T04:38:45.602</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\QuyenDo\source\repos\ASM_uwp2\ASM_uwp2\Assets\Square150x150Logo.scale-100.png">
       <PackagePath>Assets\Square150x150Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-10-17T08:59:00.637</Modified>
+      <Modified>2018-10-25T04:38:42.902</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\QuyenDo\source\repos\ASM_uwp2\ASM_uwp2\Assets\Square150x150Logo.scale-125.png">
       <PackagePath>Assets\Square150x150Logo.scale-125.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-10-17T08:59:00.662</Modified>
+      <Modified>2018-10-25T04:38:42.931</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\QuyenDo\source\repos\ASM_uwp2\ASM_uwp2\Assets\Square150x150Logo.scale-150.png">
       <PackagePath>Assets\Square150x150Logo.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-10-17T08:59:00.691</Modified>
+      <Modified>2018-10-25T04:38:42.960</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\QuyenDo\source\repos\ASM_uwp2\ASM_uwp2\Assets\Square150x150Logo.scale-400.png">
       <PackagePath>Assets\Square150x150Logo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-10-17T08:59:00.823</Modified>
+      <Modified>2018-10-25T04:38:43.114</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\QuyenDo\source\repos\ASM_uwp2\ASM_uwp2\Assets\Square44x44Logo.altform-unplated_targetsize-16.png">
       <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-16.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-10-17T08:59:02.032</Modified>
+      <Modified>2018-10-25T04:38:44.363</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\QuyenDo\source\repos\ASM_uwp2\ASM_uwp2\Assets\Square44x44Logo.altform-unplated_targetsize-256.png">
       <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-256.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-10-17T08:59:02.114</Modified>
+      <Modified>2018-10-25T04:38:44.469</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\QuyenDo\source\repos\ASM_uwp2\ASM_uwp2\Assets\Square44x44Logo.altform-unplated_targetsize-32.png">
       <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-32.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-10-17T08:59:02.061</Modified>
+      <Modified>2018-10-25T04:38:44.391</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\QuyenDo\source\repos\ASM_uwp2\ASM_uwp2\Assets\Square44x44Logo.altform-unplated_targetsize-48.png">
       <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-48.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-10-17T08:59:02.077</Modified>
+      <Modified>2018-10-25T04:38:44.408</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\QuyenDo\source\repos\ASM_uwp2\ASM_uwp2\Assets\Square44x44Logo.scale-100.png">
       <PackagePath>Assets\Square44x44Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-10-17T08:59:01.818</Modified>
+      <Modified>2018-10-25T04:38:44.156</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\QuyenDo\source\repos\ASM_uwp2\ASM_uwp2\Assets\Square44x44Logo.scale-125.png">
       <PackagePath>Assets\Square44x44Logo.scale-125.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-10-17T08:59:01.836</Modified>
+      <Modified>2018-10-25T04:38:44.174</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\QuyenDo\source\repos\ASM_uwp2\ASM_uwp2\Assets\Square44x44Logo.scale-150.png">
       <PackagePath>Assets\Square44x44Logo.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-10-17T08:59:01.857</Modified>
+      <Modified>2018-10-25T04:38:44.194</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\QuyenDo\source\repos\ASM_uwp2\ASM_uwp2\Assets\Square44x44Logo.scale-400.png">
       <PackagePath>Assets\Square44x44Logo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-10-17T08:59:01.906</Modified>
+      <Modified>2018-10-25T04:38:44.244</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\QuyenDo\source\repos\ASM_uwp2\ASM_uwp2\Assets\Square44x44Logo.targetsize-16.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-16.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-10-17T08:59:01.923</Modified>
+      <Modified>2018-10-25T04:38:44.259</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\QuyenDo\source\repos\ASM_uwp2\ASM_uwp2\Assets\Square44x44Logo.targetsize-24.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-10-17T08:59:01.945</Modified>
+      <Modified>2018-10-25T04:38:44.273</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\QuyenDo\source\repos\ASM_uwp2\ASM_uwp2\Assets\Square44x44Logo.targetsize-256.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-256.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-10-17T08:59:02.018</Modified>
+      <Modified>2018-10-25T04:38:44.346</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\QuyenDo\source\repos\ASM_uwp2\ASM_uwp2\Assets\Square44x44Logo.targetsize-32.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-32.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-10-17T08:59:01.964</Modified>
+      <Modified>2018-10-25T04:38:44.286</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\QuyenDo\source\repos\ASM_uwp2\ASM_uwp2\Assets\Square44x44Logo.targetsize-48.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-48.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-10-17T08:59:01.982</Modified>
+      <Modified>2018-10-25T04:38:44.300</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\QuyenDo\source\repos\ASM_uwp2\ASM_uwp2\Assets\StoreLogo.scale-100.png">
       <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-10-17T08:59:03.343</Modified>
+      <Modified>2018-10-25T04:38:45.618</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\QuyenDo\source\repos\ASM_uwp2\ASM_uwp2\Assets\StoreLogo.scale-125.png">
       <PackagePath>Assets\StoreLogo.scale-125.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-10-17T08:59:03.362</Modified>
+      <Modified>2018-10-25T04:38:45.634</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\QuyenDo\source\repos\ASM_uwp2\ASM_uwp2\Assets\StoreLogo.scale-150.png">
       <PackagePath>Assets\StoreLogo.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-10-17T08:59:03.382</Modified>
+      <Modified>2018-10-25T04:38:45.650</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\QuyenDo\source\repos\ASM_uwp2\ASM_uwp2\Assets\StoreLogo.scale-200.png">
       <PackagePath>Assets\StoreLogo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-10-17T08:59:03.408</Modified>
+      <Modified>2018-10-25T04:38:45.672</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\QuyenDo\source\repos\ASM_uwp2\ASM_uwp2\Assets\StoreLogo.scale-400.png">
       <PackagePath>Assets\StoreLogo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-10-17T08:59:03.443</Modified>
+      <Modified>2018-10-25T04:38:45.713</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\QuyenDo\source\repos\ASM_uwp2\ASM_uwp2\Assets\Wide310x150Logo.scale-100.png">
       <PackagePath>Assets\Wide310x150Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-10-17T08:59:00.849</Modified>
+      <Modified>2018-10-25T04:38:43.138</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\QuyenDo\source\repos\ASM_uwp2\ASM_uwp2\Assets\Wide310x150Logo.scale-125.png">
       <PackagePath>Assets\Wide310x150Logo.scale-125.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-10-17T08:59:00.882</Modified>
+      <Modified>2018-10-25T04:38:43.168</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\QuyenDo\source\repos\ASM_uwp2\ASM_uwp2\Assets\Wide310x150Logo.scale-150.png">
       <PackagePath>Assets\Wide310x150Logo.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-10-17T08:59:00.943</Modified>
+      <Modified>2018-10-25T04:38:43.205</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\QuyenDo\source\repos\ASM_uwp2\ASM_uwp2\Assets\Wide310x150Logo.scale-400.png">
       <PackagePath>Assets\Wide310x150Logo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-10-17T08:59:01.182</Modified>
+      <Modified>2018-10-25T04:38:43.450</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\QuyenDo\source\repos\ASM_uwp2\ASM_uwp2\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
@@ -762,27 +766,27 @@
     <AppxPackagedFile Include="C:\Users\QuyenDo\source\repos\ASM_uwp2\ASM_uwp2\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-10-17T08:59:02.605</Modified>
+      <Modified>2018-10-25T04:38:44.890</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\QuyenDo\source\repos\ASM_uwp2\ASM_uwp2\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-10-17T08:59:00.728</Modified>
+      <Modified>2018-10-25T04:38:43.004</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\QuyenDo\source\repos\ASM_uwp2\ASM_uwp2\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-10-17T08:59:01.878</Modified>
+      <Modified>2018-10-25T04:38:44.215</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\QuyenDo\source\repos\ASM_uwp2\ASM_uwp2\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-10-17T08:59:02.046</Modified>
+      <Modified>2018-10-25T04:38:44.378</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\QuyenDo\source\repos\ASM_uwp2\ASM_uwp2\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-10-17T08:59:01.002</Modified>
+      <Modified>2018-10-25T04:38:43.262</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\QuyenDo\source\repos\ASM_uwp2\ASM_uwp2\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
@@ -790,35 +794,39 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\QuyenDo\source\repos\ASM_uwp2\ASM_uwp2\bin\x64\Debug\ASM_uwp2.xr.xml">
       <PackagePath>ASM_uwp2.xr.xml</PackagePath>
-      <Modified>2018-10-18T12:23:50.025</Modified>
+      <Modified>2018-10-25T10:58:13.646</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\QuyenDo\source\repos\ASM_uwp2\ASM_uwp2\bin\x64\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2018-10-19T03:48:49.748</Modified>
+      <Modified>2018-10-25T10:58:13.708</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\QuyenDo\source\repos\ASM_uwp2\ASM_uwp2\bin\x64\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2018-10-19T03:48:49.748</Modified>
+      <Modified>2018-10-25T10:58:13.709</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\QuyenDo\source\repos\ASM_uwp2\ASM_uwp2\bin\x64\Debug\view\ListView.xbf">
       <PackagePath>view\ListView.xbf</PackagePath>
-      <Modified>2018-10-19T03:48:49.749</Modified>
+      <Modified>2018-10-25T10:58:13.710</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\QuyenDo\source\repos\ASM_uwp2\ASM_uwp2\bin\x64\Debug\view\SongForm.xbf">
       <PackagePath>view\SongForm.xbf</PackagePath>
-      <Modified>2018-10-19T03:48:49.750</Modified>
+      <Modified>2018-10-25T10:58:13.712</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\QuyenDo\source\repos\ASM_uwp2\ASM_uwp2\bin\x64\Debug\view\SplitView.xbf">
       <PackagePath>view\SplitView.xbf</PackagePath>
-      <Modified>2018-10-19T03:48:49.751</Modified>
+      <Modified>2018-10-25T10:58:13.713</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\QuyenDo\source\repos\ASM_uwp2\ASM_uwp2\bin\x64\Debug\view\Login.xbf">
       <PackagePath>view\Login.xbf</PackagePath>
-      <Modified>2018-10-19T03:48:49.752</Modified>
+      <Modified>2018-10-25T10:58:13.714</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\QuyenDo\source\repos\ASM_uwp2\ASM_uwp2\bin\x64\Debug\view\Sign.xbf">
       <PackagePath>view\Sign.xbf</PackagePath>
-      <Modified>2018-10-19T03:48:49.753</Modified>
+      <Modified>2018-10-25T10:58:13.715</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\QuyenDo\source\repos\ASM_uwp2\ASM_uwp2\bin\x64\Debug\view\TestView.xbf">
+      <PackagePath>view\TestView.xbf</PackagePath>
+      <Modified>2018-10-25T10:58:13.716</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.17134.0\\redist\Debug\X64\ucrtbased.dll">
       <PackagePath>ucrtbased.dll</PackagePath>
@@ -843,11 +851,11 @@
     <AppxPackagedFile Include="C:\Users\QuyenDo\source\repos\ASM_uwp2\ASM_uwp2\bin\x64\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-10-17T08:59:22.392</Modified>
+      <Modified>2018-10-25T05:49:01.172</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\QuyenDo\source\repos\ASM_uwp2\ASM_uwp2\bin\x64\Debug\Core\ASM_uwp2.exe">
       <PackagePath>ASM_uwp2.exe</PackagePath>
-      <Modified>2018-10-19T03:48:51.352</Modified>
+      <Modified>2018-10-25T10:58:15.401</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

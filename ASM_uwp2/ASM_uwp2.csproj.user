@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Source>C:\Users\QuyenDo\Downloads\Reload-1.2s-200px.gif</Source>
-    <SmallTileSource>C:\Users\QuyenDo\Downloads\Reload-1.2s-200px.gif</SmallTileSource>
-    <MediumTileSource>C:\Users\QuyenDo\Downloads\Reload-1.2s-200px.gif</MediumTileSource>
-    <WideTileSource>C:\Users\QuyenDo\Downloads\Reload-1.2s-200px.gif</WideTileSource>
-    <LargeTileSource>C:\Users\QuyenDo\Downloads\Reload-1.2s-200px.gif</LargeTileSource>
-    <AppIconSource>C:\Users\QuyenDo\Downloads\Reload-1.2s-200px.gif</AppIconSource>
-    <SplashScreenSource>C:\Users\QuyenDo\Downloads\Reload-1.2s-200px.gif</SplashScreenSource>
-    <PackageLogoSource>C:\Users\QuyenDo\Downloads\Reload-1.2s-200px.gif</PackageLogoSource>
+    <Source>C:\Users\QuyenDo\Downloads\43617987_323040568489959_8667280334456356864_n.png</Source>
+    <SmallTileSource>C:\Users\QuyenDo\Downloads\43617987_323040568489959_8667280334456356864_n.png</SmallTileSource>
+    <MediumTileSource>C:\Users\QuyenDo\Downloads\43617987_323040568489959_8667280334456356864_n.png</MediumTileSource>
+    <WideTileSource>C:\Users\QuyenDo\Downloads\43617987_323040568489959_8667280334456356864_n.png</WideTileSource>
+    <LargeTileSource>C:\Users\QuyenDo\Downloads\43617987_323040568489959_8667280334456356864_n.png</LargeTileSource>
+    <AppIconSource>C:\Users\QuyenDo\Downloads\43617987_323040568489959_8667280334456356864_n.png</AppIconSource>
+    <SplashScreenSource>C:\Users\QuyenDo\Downloads\43617987_323040568489959_8667280334456356864_n.png</SplashScreenSource>
+    <PackageLogoSource>C:\Users\QuyenDo\Downloads\43617987_323040568489959_8667280334456356864_n.png</PackageLogoSource>
   </PropertyGroup>
 </Project>

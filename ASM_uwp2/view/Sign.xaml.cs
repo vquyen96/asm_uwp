@@ -25,6 +25,7 @@ using Windows.UI.Xaml.Media.Imaging;
 
 namespace ASM_uwp2.view
 {
+   
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
@@ -156,15 +157,15 @@ namespace ASM_uwp2.view
             this.currentMember.phone = this.Phone.Text;
             this.currentMember.address = this.Address.Text;
             this.currentMember.introduction = this.Introduction.Text;
-            await ApiHandle.Sign_Up(this.currentMember);
-            Debug.WriteLine("Action success.");
 
-
-
+            bool validate = true;
             if (this.currentMember.email == "")
             {
+                validate = false;
                 email.Text = "Email khong duoc de trong!";
                 email.Foreground = new SolidColorBrush(Windows.UI.Colors.Red);
+                Email.Focus(FocusState.Programmatic);
+               
             }
             else
             {
@@ -172,12 +173,102 @@ namespace ASM_uwp2.view
             }
             if (this.currentMember.password == "")
             {
+                validate = false;
                 password.Text = "Mat khau khong duoc de trong!";
                 password.Foreground = new SolidColorBrush(Windows.UI.Colors.Red);
+                Password.Focus(FocusState.Programmatic);
             }
             else
             {
                 password.Text = "";
+            }
+            if (Confirm_Password.Password.ToString() != Password.Password.ToString())
+            {
+                validate = false;
+                Confirm_Password_Message.Text = "Ban nhap lai mat khau khong dung";
+                Confirm_Password_Message.Foreground = new SolidColorBrush(Windows.UI.Colors.Red);
+                Confirm_Password.Focus(FocusState.Programmatic);
+            }
+            else
+            {
+                Confirm_Password_Message.Text = "";
+            }
+
+            if (this.currentMember.firstName == "")
+            {
+                validate = false;
+                firstName.Text = "firstName khong duoc de trong!";
+                firstName.Foreground = new SolidColorBrush(Windows.UI.Colors.Red);
+                FirstName.Focus(FocusState.Programmatic);
+            }
+            else
+            {
+                firstName.Text = "";
+            }
+
+            if (this.currentMember.lastName == "")
+            {
+                validate = false;
+                lastName.Text = "lastName khong duoc de trong!";
+                lastName.Foreground = new SolidColorBrush(Windows.UI.Colors.Red);
+                LastName.Focus(FocusState.Programmatic);
+            }
+            else
+            {
+                lastName.Text = "";
+            }
+
+            if (this.currentMember.avatar == "")
+            {
+                validate = false;
+                avatar.Text = "avatar khong duoc de trong!";
+                avatar.Foreground = new SolidColorBrush(Windows.UI.Colors.Red);
+                ImageUrl.Focus(FocusState.Programmatic);
+            }
+            else
+            {
+                avatar.Text = "";
+            }
+
+            if (this.currentMember.address == "")
+            {
+                validate = false;
+                address.Text = "Dia chi khong duoc de trong!";
+                address.Foreground = new SolidColorBrush(Windows.UI.Colors.Red);
+                Address.Focus(FocusState.Programmatic);
+            }
+            else
+            {
+                address.Text = "";
+            }
+
+            if (this.currentMember.phone == "")
+            {
+                validate = false;
+                phone.Text = "So dien thoai khong duoc de trong!";
+                phone.Foreground = new SolidColorBrush(Windows.UI.Colors.Red);
+                Phone.Focus(FocusState.Programmatic);
+            }
+            else
+            {
+                phone.Text = "";
+            }
+            if (validate)
+            {
+                
+                if (await ApiHandle.Sign_Up(this.currentMember))
+                {
+                    Debug.WriteLine("Action success.");
+                    Login login = new Login();
+                    await login.ShowAsync();
+                }
+                else
+                {
+                    validate = false;
+                    email.Text = "Invalid email format!";
+                    email.Foreground = new SolidColorBrush(Windows.UI.Colors.Red);
+                    Email.Focus(FocusState.Programmatic);
+                }
             }
             
             //if (httpResponseMessage.Result.StatusCode == HttpStatusCode.Created)

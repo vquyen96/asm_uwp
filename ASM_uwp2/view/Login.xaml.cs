@@ -30,6 +30,7 @@ namespace ASM_uwp2.view
     public sealed partial class Login : ContentDialog
     {
         private static string API_LOGIN = "http://2-dot-backup-server-002.appspot.com/_api/v2/members/authentication";
+        //private static string API_LOGIN = "http://api.demo2-cgroup.com/public/api/login";
         public Login()
         {
             
@@ -40,8 +41,15 @@ namespace ASM_uwp2.view
         }
         private async void Button_Click(object sender, RoutedEventArgs e)
         {
-           
+            if (this.Login_Handle())
+            {
+                await Post_Login();
+            }
+            
+        }
 
+        private async Task<bool> Post_Login()
+        {
             Dictionary<String, String> LoginInfor = new Dictionary<string, string>();
             LoginInfor.Add("email", this.Email.Text);
             LoginInfor.Add("password", this.Password.Password);
@@ -49,15 +57,14 @@ namespace ASM_uwp2.view
             // Lay token
             HttpClient httpClient = new HttpClient();
             StringContent content = new StringContent(JsonConvert.SerializeObject(LoginInfor), System.Text.Encoding.UTF8, "application/json");
+            Debug.WriteLine(LoginInfor);
             var response = httpClient.PostAsync(API_LOGIN, content).Result;
             var responseContent = await response.Content.ReadAsStringAsync();
             Debug.WriteLine(response);
             Debug.WriteLine(responseContent);
             if (response.StatusCode == System.Net.HttpStatusCode.Created)
             {
-                Debug.WriteLine("in if");
                 // save file...
-                Debug.WriteLine(responseContent);
                 // Doc token
                 TokenResponse token = JsonConvert.DeserializeObject<TokenResponse>(responseContent);
 
@@ -70,12 +77,13 @@ namespace ASM_uwp2.view
                 HttpClient client2 = new HttpClient();
                 client2.DefaultRequestHeaders.Add("Authorization", "Basic " + token.token);
                 var resp = client2.GetAsync("http://2-dot-backup-server-002.appspot.com/_api/v2/members/information").Result;
-                Debug.WriteLine(await resp.Content.ReadAsStringAsync());
-                Debug.WriteLine(resp);
 
-                var rootFrame = Window.Current.Content as Frame;
+
+                //var rootFrame = Window.Current.Content as Frame;
                 this.Hide();
-                rootFrame.Navigate(typeof(SplitView));
+                //rootFrame.Navigate(typeof(SplitView));
+                var rootFrame = Window.Current.Content as Frame;
+                rootFrame.Navigate(typeof(view.ListView));
             }
             else
             {
@@ -91,22 +99,25 @@ namespace ASM_uwp2.view
                             continue;
                         }
                         TextBlock textBlock = textMessage as TextBlock;
-                        
+
                         textBlock.Text = errorObject.error[key];
                         textBlock.Visibility = Visibility.Visible;
                     }
                 }
             }
+            return true;
         }
 
-        private void Login_Handle(object sender, TappedRoutedEventArgs e)
+        private bool Login_Handle()
         {
+            var validate = true;
             var Email_txt = Email.Text;
             var Password_txt = Password.Password.ToString();
 
 
             if (Email_txt == "")
             {
+                validate = false;
                 email.Text = "Email khong duoc de trong!";
                 email.Foreground = new SolidColorBrush(Windows.UI.Colors.Red);
             }
@@ -116,6 +127,7 @@ namespace ASM_uwp2.view
             }
             if (Password_txt == "")
             {
+                validate = false;
                 password.Text = "Mat khau khong duoc de trong!";
                 password.Foreground = new SolidColorBrush(Windows.UI.Colors.Red);
             }
@@ -123,11 +135,8 @@ namespace ASM_uwp2.view
             {
                 password.Text = "";
             }
-            //if (Email_txt != "" && Password_txt != "")
-            //{
-            //    this.Hide();
-            //}
-
+            return validate;
+            
 
         }
 
@@ -137,6 +146,11 @@ namespace ASM_uwp2.view
             this.Hide();
             rootFrame.Navigate(typeof(Sign));
         }
-        
+
+        public double OpaqueIfEnabled(bool IsEnabled)
+        {
+            return IsEnabled ? 1.0 : 0.2;
+        }
+
     }
 }

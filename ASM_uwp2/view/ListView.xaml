@@ -7,36 +7,70 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:entity="using:ASM_uwp2.Entity"
     mc:Ignorable="d"
-    
+    RequestedTheme="Dark"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
+        
         <Pivot Background="{ThemeResource SystemControlChromeHighAcrylicElementMediumBrush}">
+            <!--<Image Source="Assets/drew-colins-1115973-unsplash.jpg"></Image>-->
             <Pivot.Title>
+                
                 <Grid>
-                    <TextBlock Text="Music I Like" Style="{ThemeResource SubheaderTextBlockStyle}"/>
+                    <!--<Grid.Background>
+                        <ImageBrush Stretch="Fill" ImageSource="Assets/drew-colins-1115973-unsplash.jpg"/>
+                    </Grid.Background>-->
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <!--<Ellipse     Height="50" Fill="Red"/>
+                    <Rectangle Grid.Row="0" Grid.Column="1" Fill="Green" Height="100"/>-->
+                    <Ellipse Height="75" Width="75" Grid.Row="0" Grid.Column="0">
+                        <Ellipse.Fill>
+                            <ImageBrush  x:Name="avatar" Stretch="UniformToFill"/>
+                        </Ellipse.Fill>
+                    </Ellipse>
+                    <TextBlock Grid.Row="0" Grid.Column="1" Text="" x:Name="username" VerticalAlignment="Center" 
+                                                   Style="{ThemeResource BaseTextBlockStyle}" 
+                                                   Foreground="{ThemeResource SystemControlPageTextBaseHighBrush}"
+                                                   Margin="10,0,0,0"/>
                 </Grid>
+
+                <!--<TextBlock Text="Music I Like" Style="{ThemeResource SubheaderTextBlockStyle}"/>-->
             </Pivot.Title>
             <Pivot.RightHeader>
                 <CommandBar OverflowButtonVisibility="Collapsed" Background="Transparent">
-                    <AppBarButton Icon="AddFriend"/>
+                    <!--<AppBarButton Icon="Audio"/>
                     <AppBarSeparator/>
                     <AppBarButton Icon="MusicInfo"/>
-                    <AppBarSeparator/>
-                    <AppBarButton Icon="Add"/>
+                    <AppBarSeparator/>-->
+                    <AppBarButton Icon="BlockContact" Click="AppBarButton_Click"/>
                 </CommandBar>
             </Pivot.RightHeader>
             <PivotItem Header="Hot Songs">
                 <Grid>
-                    <ListView ItemsSource="{x:Bind ListSong, Mode=TwoWay}" x:Name="MenuList">
-                        <ListView.ItemTemplate>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="881*"/>
+                        <ColumnDefinition Width="12*"/>
+                        <ColumnDefinition Width="55*"/>
+                    </Grid.ColumnDefinitions>
+                    <GridView ItemsSource="{x:Bind ListSong, Mode=TwoWay}" x:Name="MenuList" SelectionChanged="MenuList_SelectionChanged" Grid.ColumnSpan="3">
+                        <GridView.ItemTemplate>
                             <DataTemplate x:DataType="entity:Song">
-                                <StackPanel Padding="12" Orientation="Horizontal" Tag="{Binding}" Tapped="StackPanel_Tapped" AutomationProperties.Name="{x:Bind name}">
-                                    <Ellipse Height="77" Width="77">
+                                <StackPanel Width="224" Height="224"  Padding="10" Orientation="Horizontal" Tag="{Binding}" Tapped="StackPanel_Tapped" AutomationProperties.Name="{x:Bind name}">
+                                    <StackPanel.Background>
+                                        <ImageBrush ImageSource="{x:Bind thumbnail}" Stretch="UniformToFill"/>
+                                    </StackPanel.Background>
+                                    <!--<Ellipse Height="77" Width="77">
                                         <Ellipse.Fill>
                                             <ImageBrush ImageSource="{x:Bind thumbnail}"/>
                                         </Ellipse.Fill>
-                                    </Ellipse>
+                                    </Ellipse>-->
+                                    <!--<ImageBrush ImageSource="{x:Bind thumbnail}"/>-->
                                     <StackPanel Margin="24,12,0,0">
                                         <TextBlock Text="{x:Bind name}" VerticalAlignment="Center" 
                                                Style="{ThemeResource BaseTextBlockStyle}" 
@@ -49,30 +83,78 @@
 
                                 </StackPanel>
                             </DataTemplate>
-                        </ListView.ItemTemplate>
-                    </ListView>
+                        </GridView.ItemTemplate>
+                    </GridView>
                 </Grid>
             </PivotItem>
-            <PivotItem Header="Add Song">
-                <StackPanel>
-                    <TextBox x:Name="SongName" Header="Song Name"/>
-                    <TextBox x:Name="SongThumbnail" Header="Thumbnail"/>
-                    <Button Content="Save" Click="Button_Click"/>
-                </StackPanel>
+            <PivotItem Header="My Song" IsEnabled="True">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="881*"/>
+                        <ColumnDefinition Width="12*"/>
+                        <ColumnDefinition Width="55*"/>
+                    </Grid.ColumnDefinitions>
+                    <GridView ItemsSource="{x:Bind ListMySong, Mode=TwoWay}" x:Name="MyList" SelectionChanged="MenuList_SelectionChanged" Grid.ColumnSpan="3">
+                        <GridView.ItemTemplate>
+                            <DataTemplate x:DataType="entity:Song">
+                                <StackPanel Width="224" Height="224"  Padding="10" Orientation="Horizontal" Tag="{Binding}" Tapped="StackPanel_Tapped_MySong" AutomationProperties.Name="{x:Bind name}" >
+                                    <StackPanel.Background>
+                                        <ImageBrush ImageSource="{x:Bind thumbnail}" Stretch="UniformToFill"/>
+                                    </StackPanel.Background>
+                                    <StackPanel Margin="24,12,0,0">
+                                        <TextBlock Text="{x:Bind name}" VerticalAlignment="Center" 
+                                               Style="{ThemeResource BaseTextBlockStyle}" 
+                                               Foreground="{ThemeResource SystemControlPageTextBaseHighBrush}"
+                                                Margin="0,0,0,0"/>
+                                        <TextBlock Text="{x:Bind singer}" VerticalAlignment="Center"                                                
+                                               Foreground="{ThemeResource SystemControlPageTextBaseHighBrush}" 
+                                               Margin="0,7,0,0"/>
+                                    </StackPanel>
+                                </StackPanel>
+                            </DataTemplate>
+                        </GridView.ItemTemplate>
+                    </GridView>
+                </Grid>
             </PivotItem>
+            <PivotItem Header="Add new song">
+                <Grid>
+                    <ScrollViewer HorizontalAlignment="Stretch">
+                        <StackPanel x:Name="ParentStackPanel" Width="293" Padding="0,0,0,150">
+                            <TextBox x:Name="Name" Margin="0, 30, 0, 0" Header="Name" HorizontalAlignment="Left" Text="" VerticalAlignment="Top" Width="293"/>
+                            <TextBlock x:Name="name" Foreground="Red" RelativePanel.Below="Email"  Margin=" 0, 0, 0, 15"/>
+                            <TextBox AcceptsReturn="True" x:Name="Description" Margin="0, 30, 0, 0" Header="Description" HorizontalAlignment="Left" VerticalAlignment="Top" Width="293" Height="100"/>
+                            <TextBlock x:Name="description" Foreground="Red" RelativePanel.Below="Email"  Margin=" 0, 0, 0, 15"/>
+                            <TextBox x:Name="Singer" Margin="0, 30, 0, 0" Header="Singer" HorizontalAlignment="Left" Text="" VerticalAlignment="Top" Width="293"/>
+                            <TextBlock x:Name="singer" Foreground="Red" RelativePanel.Below="Email"  Margin=" 0, 0, 0, 15"/>
+                            <TextBox x:Name="Author" Margin="0, 30, 0, 0" Header="Author" HorizontalAlignment="Left" Text="" VerticalAlignment="Top" Width="293"/>
+                            <TextBlock x:Name="author" Foreground="Red" RelativePanel.Below="Email"  Margin=" 0, 0, 0, 15"/>
+                            <TextBox x:Name="Link" Margin="0, 30, 0, 0" Header="Link" HorizontalAlignment="Left" Text="" VerticalAlignment="Top" Width="293"/>
+                            <TextBlock x:Name="link" Foreground="Red" RelativePanel.Below="Email"  Margin=" 0, 0, 0, 15"/>
+
+                            <TextBox x:Name="Thumbnail" Margin="0, 30, 0, 0" Header="Thumbnail" HorizontalAlignment="Left" Text="" VerticalAlignment="Top" Width="293"/>
+                            <TextBlock x:Name="thumbnail" Foreground="Red" RelativePanel.Below="Email"  Margin=" 0, 0, 0, 15"/>
+
+                            <Button x:Name="BtnSignup" Margin="0, 30, 0, 0" Content="Add Song" HorizontalAlignment="Stretch" VerticalAlignment="Top" Click="BtnSignup_Click"/>
+                            <Button x:Name="BtnReset" Margin="0, 30, 0, 0" Content="Reset" HorizontalAlignment="Stretch" VerticalAlignment="Top"/>
+                            <!--<MediaPlayerElement Source="https://od.lk/s/NjFfMjM4MzQ1OThf/ThangTuLaLoiNoiDoiCuaEm-HaAnhTuan-4609544.mp3" x:Name="Player"/>-->
+                        </StackPanel>
+                    </ScrollViewer>
+                </Grid>
+            </PivotItem>
+
         </Pivot>
-        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Bottom" Orientation="Horizontal" Background="#FFDEDEDE" Height="25" Margin="0,0,0,44">
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Bottom" Orientation="Horizontal" Background="#333" Height="25" Margin="0,0,0,44">
             <TextBlock>
                 Now Playing:
             </TextBlock>
             <TextBlock x:Name="NowPlaying" Margin="10,0,0,0">
             </TextBlock>
         </StackPanel>
-        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Bottom" Orientation="Horizontal" Background="#FFDEDEDE" Height="45">
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Bottom" Orientation="Horizontal" Background="#333" Height="45">
             <AppBarSeparator/>
-            <TextBlock x:Name="MinDuration"/>
+            <TextBlock x:Name="MinDuration" Margin="0,11,10,0"/>
             <ProgressBar x:Name="Progress" Height="15" Width="320"></ProgressBar>
-            <TextBlock x:Name="MaxDuration"/>
+            <TextBlock x:Name="MaxDuration" Margin="10,11,0,0"/>
             <AppBarSeparator/>
             <AppBarButton Icon="Previous" Click="PlayBack" ToolTipService.ToolTip="Previous Song"/>
             <AppBarButton Icon="Play" Click="PlayClick" ToolTipService.ToolTip="Play/Pause Song" x:Name="PlayButton"/>

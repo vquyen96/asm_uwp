@@ -1,5 +1,6 @@
 WinMetadata\Windows.winmd
 Assets\affection-american-beautiful-1150994.jpg
+Assets\drew-colins-1115973-unsplash.jpg
 Assets\LargeTile.scale-100.png
 Assets\LargeTile.scale-125.png
 Assets\LargeTile.scale-150.png
@@ -55,4 +56,5 @@ view\Login.xbf
 view\Sign.xbf
 view\SongForm.xbf
 view\SplitView.xbf
+view\TestView.xbf
 Properties\Default.rd.xml
